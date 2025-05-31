@@ -57,3 +57,32 @@ function toggleMenu() {
     });
   });
  
+
+   const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbyswbI1D7TrEnsriC0dytRD-c38WvQFC1f3ucfg8Qj1kjcdK0TbLXtQOxUgwQtNEFI7/exec", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert("Form submitted successfully!");
+      form.reset();
+    })
+    .catch(error => {
+      alert("Error submitting form");
+      console.error(error);
+    });
+  });

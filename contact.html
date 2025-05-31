@@ -17,7 +17,7 @@
     
     <div class="navbar-bottom">
         <marquee behavior="scroll" direction="left">
-          🚀 Big Sale! 50% OFF on all products | 🔔 New updates are live now | 🎉 Welcome to our official website
+        📍 Visit us at Star 1gm Gold, Nethaji Road, Madurai | 📞 Call: 0452-4378633 | 📲 WhatsApp: 94448 82296 | ✉️ star1gmgold12345@gmail.com
         </marquee>
       </div>
  <div class="navbar">
@@ -38,25 +38,7 @@
     
 
 
-<section class="g-contact-wrapper">
-  <div class="g-contact-container">
-    <h2 class="g-contact-title">Contact Us</h2>
-
-    <div class="g-contact-details">
-      <p><i class="fas fa-phone-alt"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:info@yourbusiness.com">info@yourbusiness.com</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Madurai, Tamil Nadu, India</p>
-    </div>
-
-    <div class="g-contact-social">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </div>
-</section>
-
+ 
 
 
 
@@ -78,17 +60,24 @@
         <p><strong>Phone:</strong> +1-234-567-8901</p>
         <p><strong>Address:</strong> 123 Main Street, City, Country</p>
         <p><strong>WhatsApp:</strong> +1-234-567-8901</p>
+        <div class="g-contact-social">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
       </div>
   
       <!-- Right: Contact Form -->
       <div class="contact-form">
         <h2>Send a Message</h2>
-        <form>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+        <form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="tel" name="phone" placeholder="Your Phone Number" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
       </div>
     </div>
   </section>
@@ -145,6 +134,35 @@
     </div>
   </footer>
   
-  
+  <script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default HTML form action
+
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbyswbI1D7TrEnsriC0dytRD-c38WvQFC1f3ucfg8Qj1kjcdK0TbLXtQOxUgwQtNEFI7/exec", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert("Form submitted successfully!");
+      form.reset();
+    })
+    .catch(error => {
+      alert("Error submitting form.");
+      console.error(error);
+    });
+  });
+</script>
 </body>
 </html>

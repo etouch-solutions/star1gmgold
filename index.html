@@ -17,7 +17,7 @@
 
     <div class="navbar-bottom">
         <marquee behavior="scroll" direction="left">
-          🚀 Big Sale! 50% OFF on all products | 🔔 New updates are live now | 🎉 Welcome to our official website
+         📍 Visit us at Star 1gm Gold, Nethaji Road, Madurai | 📞 Call: 0452-4378633 | 📲 WhatsApp: 94448 82296 | ✉️ star1gmgold12345@gmail.com
         </marquee>
       </div>
  <div class="navbar">
@@ -82,23 +82,23 @@
     
     <div class="card wave-delay-1">
       <img src="img/goldjels (14).png" alt="Card 1" />
-      <h3 class="text-dark-card">Card Title 1</h3>
+      <h3 class="text-dark-card">Royal Gold Ring</h3>
       
 
     </div>
     <div class="card wave-delay-2">
       <img src="img/goldjels (4).png" alt="Card 2" />
-      <h3 class="text-dark-card">Card Title 2</h3>
+      <h3 class="text-dark-card">Classic Shine Ring</h3>
     
     </div>
     <div class="card wave-delay-3">
       <img src="img/goldjels (3).png" alt="Card 3" />
-      <h3 class="text-dark-card">Card Title 3</h3>
+      <h3 class="text-dark-card">Royal Charm Bangle</h3>
       
     </div>
     <div class="card wave-delay-4">
       <img src="img/goldjels (2).png" alt="Card 4" />
-      <h3 class="text-dark-card">Card Title 4</h3>
+      <h3 class="text-dark-card">Bold Spark Ring</h3>
    
     </div>
   </section>
@@ -112,10 +112,12 @@
             <img src="img/aboutsection.png" alt="About Us">
           </div>
           <div class="about-col about-text">
-            <h2>About Us</h2>
+            <h2>Welcome to Star 1gm Gold – Since 1965</h2>
+            <h4>Crafting Timeless Beauty in 1 Gram Gold Jewelry</h4>
             <p>
-              We’re a team of creators and innovators focused on building meaningful digital experiences.
-              With years of experience and a passion for excellence, we turn ideas into impactful solutions.
+             Discover a world of traditional elegance and modern craftsmanship with Star 1gm Gold, Madurai’s trusted name in 1 gram gold jewelry for over five decades. From statement Haram collections to everyday elegance, we bring you affordable luxury that lasts.
+
+
             </p>
             <button class="about-btn">Learn More</button>
           </div>
@@ -156,53 +158,48 @@
 
         <div class="card-slide">
           <img src="img/goldjels (10).png" alt="Card 2">
-          <h3>Title Two</h3>
-          <p>This is a short description of the second card.</p>
+          <h3>Royal Gold Ring</h3>
+          <p>Embrace timeless elegance with the Royal Gold Ring — a regal piece crafted for those who cherish tradition and grandeur. Perfect for weddings or special occasions.</p>
         </div>
 
 
         <div class="card-slide">
           <img src="img/goldjels (11).png" alt="Card 3">
-          <h3>Title Three</h3>
-          <p>This is a short description of the third card.</p>
+          <h3>Royal Drop Earring</h3>
+          <p>Add a touch of royalty to your look with the Royal Drop Earring — crafted with fine gold and designed to sway gracefully with every move.</p>
         </div>
 
 
         <div class="card-slide">
             <img src="img/goldjels (13).png" alt="Card 2">
-            <h3>Title Two</h3>
-            <p>This is a short description of the second card.</p>
+            <h3>Slim Line Chain</h3>
+            <p>Lightweight and sleek, the Slim Line Chain is perfect for daily wear or pairing with small pendants for a minimal, modern vibe.</p>
           </div>
   
   
           <div class="card-slide">
             <img src="img/goldjels (12).png" alt="Card 3">
-            <h3>Title Three</h3>
-            <p>This is a short description of the third card.</p>
+            <h3>Classic Gold Bangle</h3>
+            <p>Timeless and versatile, the Classic Gold Bangle complements every outfit and occasion. A must-have in every jewelry box.</p>
           </div>
 
 
           <div class="card-slide">
             <img src="img/goldjels (1).png" alt="Card 2">
-            <h3>Title Two</h3>
-            <p>This is a short description of the second card.</p>
+            <h3>Elegant Glow Ring</h3>
+            <p>Delicately crafted with a soft golden finish, the Elegant Glow Ring reflects sophistication and feminine charm. Ideal for both casual and festive looks.</p>
           </div>
 
 
           <div class="card-slide">
             <img src="img/goldjels (4).png" alt="Card 3">
-            <h3>Title Three</h3>
-            <p>This is a short description of the third card.</p>
+            <h3>Floral Twist Ring</h3>
+            <p>Inspired by nature’s beauty, the Floral Twist Ring features graceful curves and petal-like detailing — perfect for those who love a romantic touch.</p>
           </div>
   
 
 
-        <div class="card-slide">
-          <img src="img/goldjels (2).png" alt="Card 4">
-          <h3>Title Four</h3>
-          <p>This is a short description of the fourth card.</p>
-        </div>
-
+        
 
       </div>
        
@@ -228,12 +225,13 @@
       <!-- Right: Contact Form -->
       <div class="contact-form">
         <h2>Send a Message</h2>
-        <form>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+       <form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="tel" name="phone" placeholder="Your Phone Number" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
       </div>
     </div>
   </section>
@@ -292,7 +290,36 @@
   
   
       
-    
+     <script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default HTML form action
+
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbyswbI1D7TrEnsriC0dytRD-c38WvQFC1f3ucfg8Qj1kjcdK0TbLXtQOxUgwQtNEFI7/exec", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert("Form submitted successfully!");
+      form.reset();
+    })
+    .catch(error => {
+      alert("Error submitting form.");
+      console.error(error);
+    });
+  });
+</script>
     <script src="sole.js"></script>
 </body>
 </html>
