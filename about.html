@@ -8,13 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="reuse.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="preloder.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="preloader">
+  <div class="pyramid-loader">
+    <div class="wrapper">
+      <span class="side side1"></span>
+      <span class="side side2"></span>
+      <span class="side side3"></span>
+      <span class="side side4"></span>
+      <span class="shadow"></span>
+    </div>
+  </div>
+</div>
     <div class="navbar-bottom">
         <marquee behavior="scroll" direction="left">
           📍 Visit us at Star 1gm Gold, Nethaji Road, Madurai | 📞 Call: 0452-4378633 | 📲 WhatsApp: 94448 82296 | ✉️ star1gmgold12345@gmail.com
@@ -57,7 +68,7 @@ Our legacy is built on trust, quality, and unmatched craftsmanship. With decades
      <section class="about-section">
         <div class="about-row">
           <div class="about-col about-img">
-            <img src="img/Untitled design (26).png" alt="About Us">
+            <img class="zoom-in-on-scroll" src="img/Untitled design (26).png" alt="About Us">
           </div>
           <div class="about-col about-text">
             <h2>What Makes Us Special?</h2>
@@ -85,7 +96,7 @@ Our legacy is built on trust, quality, and unmatched craftsmanship. With decades
              
           </div>
             <div class="about-col about-img">
-            <img src="img/aboutsection.png" alt="About Us">
+            <img class="zoom-in-on-scroll" src="img/aboutsection.png" alt="About Us">
           </div>
         </div>
       </section>
@@ -170,7 +181,78 @@ Our legacy is built on trust, quality, and unmatched craftsmanship. With decades
   </footer>
   
 
+   
+    <script>
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const zoomElements = document.querySelectorAll(".zoom-in-on-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    zoomElements.forEach(el => observer.observe(el));
+  });
+
+      
+   document.addEventListener("DOMContentLoaded", function () {
+    const fadeUps = document.querySelectorAll(".fade-up");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeUps.forEach(el => observer.observe(el));
+  });
+
+
+
+
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        message: form.message.value,
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbyswbI1D7TrEnsriC0dytRD-c38WvQFC1f3ucfg8Qj1kjcdK0TbLXtQOxUgwQtNEFI7/exec", {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("responseMsg").innerText = "✅ Message sent successfully!";
+        form.reset();
+      })
+      .catch(err => {
+        document.getElementById("responseMsg").innerText = "❌ Error submitting form.";
+        console.error(err);
+      });
+    });
+  </script>
+
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.transition = "opacity 0.5s ease";
+    setTimeout(() => preloader.style.display = "none", 500);
+  });
+</script> 
 </body>
 </html>

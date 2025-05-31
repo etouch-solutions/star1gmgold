@@ -8,13 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="reuse.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="preloder.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="preloader">
+  <div class="pyramid-loader">
+    <div class="wrapper">
+      <span class="side side1"></span>
+      <span class="side side2"></span>
+      <span class="side side3"></span>
+      <span class="side side4"></span>
+      <span class="shadow"></span>
+    </div>
+  </div>
+</div>
     <div class="navbar-bottom">
         <marquee behavior="scroll" direction="left">
          📍 Visit us at Star 1gm Gold, Nethaji Road, Madurai | 📞 Call: 0452-4378633 | 📲 WhatsApp: 94448 82296 | ✉️ star1gmgold12345@gmail.com
@@ -124,7 +135,14 @@
     </div>
   </footer>
   
-  
+  <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.transition = "opacity 0.5s ease";
+    setTimeout(() => preloader.style.display = "none", 500);
+  });
+</script> 
     
 </body>
 </html>
