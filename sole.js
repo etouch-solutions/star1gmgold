@@ -14,17 +14,7 @@
     stopAutoSlide(); // Stop auto-slide if user interacts
   }
   
-  // Event Listeners
-  nextBtn.addEventListener("click", () => scrollSlider(1));
-  prevBtn.addEventListener("click", () => scrollSlider(-1));
-  
-  // Auto Slide Control
-  let autoSlide = setInterval(() => scrollSlider(1), 1000);
-  
-  function stopAutoSlide() {
-    clearInterval(autoSlide);
-    autoSlide = null;
-  }
+   
   
   
 const burgerMenu = document.getElementById('burgerMenu');
