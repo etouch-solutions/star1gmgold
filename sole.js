@@ -1,17 +1,4 @@
-document.getElementById('menu-toggle').addEventListener('click', function () {
-    document.getElementById('menu').classList.toggle('show');
-  });
-
-
- document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.getElementById("goldToggle");
-      const menu = document.getElementById("goldMenu");
-
-      toggle.addEventListener("click", function () {
-        menu.classList.toggle("show");
-      });
-    });
-
+ 
 
   const slider = document.getElementById("cardSlider");
   const nextBtn = document.getElementById("nextBtn");
@@ -39,37 +26,34 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
     autoSlide = null;
   }
   
- 
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-
-    toggle.addEventListener("click", function () {
-      menu.classList.toggle("show");
-    });
-  });
- 
-
-
-
- 
-const filterButtons = document.querySelectorAll(".filter-btn");
-const galleryItems = document.querySelectorAll(".gallery-item");
-
-filterButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const category = btn.getAttribute("data-category");
-
-    // Highlight active button
-    filterButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    // Filter gallery
-    galleryItems.forEach(item => {
-      const match = category === "all" || item.dataset.category === category;
-      item.style.display = match ? "block" : "none";
-    });
-  });
-});
-
   
+const burgerMenu = document.getElementById('burgerMenu');
+const navOverlay = document.getElementById('navOverlay');
+
+function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    // Smooth scroll for compatibility
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          document.getElementById('navLinks').classList.remove('active'); // close menu on click
+        }
+      });
+    });
+   
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+
+  // Close menu when clicking a link (on mobile)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function () {
+      document.getElementById('navLinks').classList.remove('active');
+    });
+  });
+ 

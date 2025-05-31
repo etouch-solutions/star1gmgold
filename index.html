@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="reuse.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
@@ -17,32 +20,59 @@
           🚀 Big Sale! 50% OFF on all products | 🔔 New updates are live now | 🎉 Welcome to our official website
         </marquee>
       </div>
-
-  <nav class="gold-navbar">
-    <div class="logo">
-      <img class="logo-img" src="img/Star1gmgold.png" alt="Logo">
+ <div class="navbar">
+    <div class="logo">Jewels</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="collections.html">Collections</a>
+      <a href="watchus.html">Watch Us</a>
+      <a href="contact.html">Contact</a>
     </div>
-    <button class="gold-toggle" id="goldToggle">☰</button>
-    <div class="gold-menu" id="goldMenu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </div>
-  </nav>
-
+  </div>
 
 
 
       <!-- Hero Image Slider -->
 <section class="hero-slider">
     <div class="slides-container" id="slider">
-      <div class="slide active"><img src="img/1.png" alt="Slide 1" /></div>
-      <div class="slide"><img src="img/2.png" alt="Slide 2" /></div>
-      <div class="slide"><img src="img/3.png" alt="Slide 3" /></div>
+      <div class="slide active"><img src="img/banner1.png" alt="Slide 1" /></div>
+      <div class="slide"><img src="img/banner2.png" alt="Slide 2" /></div>
+      <div class="slide"><img src="img/banner3.png" alt="Slide 3" /></div>
     </div>
   </section>
+ 
+<section class="shop-category-section">
+  <div class="section-header">
+    <h2>SHOP BY CATEGORY</h2>
+    <p>Explore our diverse selections. Find your style</p>
+  </div>
 
+  <div class="category-grid">
+    <div class="category-item">
+      <img src="img/cat1 (1).jpg" alt="Earrings">
+      <h3>Earrings</h3>
+    </div>
+    <div class="category-item">
+      <img src="img/cat1 (4).jpg" alt="Rings">
+      <h3>Rings</h3>
+    </div>
+    <div class="category-item">
+      <img src="img/cat1 (3).jpg" alt="Pendants">
+      <h3>Pendants</h3>
+    </div>
+    <div class="category-item">
+      <img src="img/cat1 (2).jpg" alt="Bangles & Bracelets">
+      <h3>Bangles & Bracelets</h3>
+    </div>
+    <div class="category-item">
+      <img src="img/cat1 (5).jpg" alt="Mangalsutra">
+      <h3>Mangalsutra</h3>
+    </div>
+    
+  </div>
+</section>
 
   <div class="heding-tittle pink">
     <h2 class="section-heading">Our Services</h2>
@@ -51,49 +81,35 @@
 <section class="card-section">
     
     <div class="card wave-delay-1">
-      <img src="img/4.png" alt="Card 1" />
-      <h3>Card Title 1</h3>
-      <button class="gold-red-btn">Click Me</button>
+      <img src="img/goldjels (14).png" alt="Card 1" />
+      <h3 class="text-dark-card">Card Title 1</h3>
+      
 
     </div>
     <div class="card wave-delay-2">
-      <img src="img/4.png" alt="Card 2" />
-      <h3>Card Title 2</h3>
-      <button>Read More</button>
+      <img src="img/goldjels (4).png" alt="Card 2" />
+      <h3 class="text-dark-card">Card Title 2</h3>
+    
     </div>
     <div class="card wave-delay-3">
-      <img src="img/4.png" alt="Card 3" />
-      <h3>Card Title 3</h3>
-      <button>Read More</button>
+      <img src="img/goldjels (3).png" alt="Card 3" />
+      <h3 class="text-dark-card">Card Title 3</h3>
+      
     </div>
     <div class="card wave-delay-4">
-      <img src="img/4.png" alt="Card 4" />
-      <h3>Card Title 4</h3>
-      <button>Read More</button>
+      <img src="img/goldjels (2).png" alt="Card 4" />
+      <h3 class="text-dark-card">Card Title 4</h3>
+   
     </div>
   </section>
   
 
-<section class="jewelry-showcase">
-  <div class="jewelry-card pastel">
-    <img src="img/4.png" alt="Oriana Jewelry" class="product-image" />
-    <h2 class="title">Every palette needs some pastels.</h2>
-    <button class="shop-btn">SHOP NOW</button>
-  </div>
 
-  <div class="jewelry-card bridal">
-    <img src="https://via.placeholder.com/300x300?text=Bridal+Collection" alt="Bridal Jewelry" class="product-image" />
-    <h2 class="title">Eternal Love Starts With 1 Promise</h2>
-    <button class="shop-btn">SHOP NOW</button>
-  </div>
-</section>
-
-     <!--about us section -->
 
      <section class="about-section">
         <div class="about-row">
           <div class="about-col about-img">
-            <img src="img/1080.png" alt="About Us">
+            <img src="img/aboutsection.png" alt="About Us">
           </div>
           <div class="about-col about-text">
             <h2>About Us</h2>
@@ -109,12 +125,19 @@
   
   
       <!--End Of The  Hero Image Slider -->
-    
+     <section class="card-section2">
+  <div class="banner-card">
+    <img src="img/SERVICE2.png" alt="Banner 1" />
+  </div>
+  <div class="banner-card">
+    <img src="img/SERVICE.png" alt="Banner 2" />
+  </div>
+</section>
 
  
 
     <div class="section-img">
-        <img src="img/1.png" alt="">
+        <img src="img/Star 1gm Gold (4).png" alt="">
     </div>
     
 
@@ -124,55 +147,50 @@
     <h2 class="section-heading">Featured Cards</h2>
 </div>
     <div class="slider-wrapper">
-      <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+       
       <div class="card-slider" id="cardSlider">
 
 
-        <div class="card-slide">
-          <img src="img/4.png" alt="Card 1">
-          <h3>Title One</h3>
-          <p>This is a short description of the first card.</p>
-        </div>
+        
 
 
         <div class="card-slide">
-          <img src="img/4.png" alt="Card 2">
+          <img src="img/goldjels (10).png" alt="Card 2">
           <h3>Title Two</h3>
           <p>This is a short description of the second card.</p>
         </div>
 
 
         <div class="card-slide">
-          <img src="img/4.png" alt="Card 3">
+          <img src="img/goldjels (11).png" alt="Card 3">
           <h3>Title Three</h3>
           <p>This is a short description of the third card.</p>
         </div>
 
 
         <div class="card-slide">
-            <img src="img/4.png" alt="Card 2">
+            <img src="img/goldjels (13).png" alt="Card 2">
             <h3>Title Two</h3>
             <p>This is a short description of the second card.</p>
           </div>
   
   
           <div class="card-slide">
-            <img src="img/4.png" alt="Card 3">
+            <img src="img/goldjels (12).png" alt="Card 3">
             <h3>Title Three</h3>
             <p>This is a short description of the third card.</p>
           </div>
 
-          
 
           <div class="card-slide">
-            <img src="img/4.png" alt="Card 2">
+            <img src="img/goldjels (1).png" alt="Card 2">
             <h3>Title Two</h3>
             <p>This is a short description of the second card.</p>
           </div>
-  
-  
+
+
           <div class="card-slide">
-            <img src="img/4.png" alt="Card 3">
+            <img src="img/goldjels (4).png" alt="Card 3">
             <h3>Title Three</h3>
             <p>This is a short description of the third card.</p>
           </div>
@@ -180,53 +198,19 @@
 
 
         <div class="card-slide">
-          <img src="img/4.png" alt="Card 4">
+          <img src="img/goldjels (2).png" alt="Card 4">
           <h3>Title Four</h3>
           <p>This is a short description of the fourth card.</p>
         </div>
 
 
       </div>
-      <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+       
     </div>
   </section>
 
 
-  <section class="gallery-section">
-    <h2 class="section-heading">Gallery</h2>
   
-    <!-- Category Buttons -->
-    <div class="gallery-buttons">
-      <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="nature">Nature</button>
-      <button class="filter-btn" data-category="city">City</button>
-      <button class="filter-btn" data-category="people">People</button>
-    </div>
-  
-
-
-    <!-- Gallery Grid -->
-    <div class="gallery-grid" id="galleryGrid">
-      <div class="gallery-item" data-category="nature">
-        <img src="img/4.png" alt="Nature">
-      </div>
-      <div class="gallery-item" data-category="city">
-        <img src="img/4.png" alt="City">
-      </div>
-      <div class="gallery-item" data-category="people">
-        <img src="img/4.png" alt="People">
-      </div>
-      <div class="gallery-item" data-category="nature">
-        <img src="img/4.png" alt="Nature">
-      </div>
-      <div class="gallery-item" data-category="city">
-        <img src="img/4.png" alt="City">
-      </div>
-      <div class="gallery-item" data-category="people">
-        <img src="img/4.png" alt="People">
-      </div>
-    </div>
-  </section>
   
   
       
